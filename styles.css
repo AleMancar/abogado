@@ -363,6 +363,85 @@ button:hover {
     background-color: #e6c074;
 }
 
+/* Seccion Información Legal */
+.legal-info-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+}
+
+.legal-info-header {
+    padding: 21px 10px 28px 63px;
+    position: absolute;
+    top: 60px;
+    display: inline-flex;
+    background: white;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.legal-info-title {
+    width: 281px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.legal-info-title p {
+    color: #a7a7a7;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.legal-info-title p strong {
+    color: #f0bb5f;
+}
+
+.legal-info-content {
+    width: 977px;
+    /*height: auto;*/
+    padding: 10px;
+    position: sticky;
+    left: 450px;
+    margin-top: 100px;
+    background: white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.legal-info-item {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.legal-info-title-item {
+    color: black;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.legal-info-text {
+    color: #A7A7A7;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    width: 100%;
+}
+
+.highlight-text {
+    color: #F0BB5F;
+}
+
+
+
 /* Estilos para la Sección Principal */
 .hero {
     padding: 50px 20px;
