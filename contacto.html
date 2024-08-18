@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/ab.jpg" alt="Logo del Abogado">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html" class="menu-item" id="link-home">Inicio</a></li>
+                <li><a href="divorcio.html" class="menu-item" id="link-divorce">Divorcio y Separación</a></li>
+                <li><a href="penal.html" class="menu-item" id="link-penal">Justicia Penal y Reparación</a></li>
+                <li><a href="honorarios.html" class="menu-item" id="link-fees">Honorarios</a></li>
+                <li><a href="contacto.html" class="current-page menu-item" id="link-contact">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <section class="contact-form-section">
+            <div class="form-header">
+                <h2>Formulario <span>de contacto</span></h2>
+                <div class="divider"></div>
+                <p>
+                    Indique sus datos de contacto y su mensaje. Te responderé lo antes posible. 
+                    Gracias por tu interés. Para cualquier contacto inmediato con la Firma, 
+                    marque el <span class="highlight">09XXXXXXX</span>
+                </p>
+            </div>
+        
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="email" id="correo" name="correo" placeholder="Correo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Mensaje" required style="width: 900px; height: 180px;"></textarea>
+                </div>
+                <div class="button-container">
+                    <button type="submit">ENVIAR</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="map-section">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3164.224011940437!2d-79.88916847572948!3d-2.2754356271091023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sec!4v1723165626860!5m2!1ses!2sec"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    class="map-iframe">
+                </iframe>
+            </div>
+        </section> 
+    </header>
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="footer-text">@ 2024 Alejandro Mantilla</span>
+            <span class="footer-text"> - </span>
+            <span class="footer-text">Abogado en Guayaquil</span>
+            <span class="footer-text"> - </span>
+            <span class="footer-text highlight"><a href="">Información legal</a></span>
+            <span class="footer-text"> - </span>
+            <span class="footer-text highlight"><a href="">Mapa del Sitio</a></span>
+            <span class="footer-text"> - </span>
+            <span class="footer-text">Agencia</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

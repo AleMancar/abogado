@@ -1,0 +1,770 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    flex-direction: column;  /* Cambia la dirección del flexbox a columna */
+    align-items: center;  /* Centra los elementos horizontalmente */
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
+    width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
+}
+
+/* Logo */
+.logo img {
+    width: 300px;
+    height: 175px;
+    object-fit: contain;
+    margin-bottom: 25px;  /* Espacio entre el logo y el menú */
+}
+
+/* Menú de Navegación */
+nav {
+    width: 100%;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;  /* Centra el menú horizontalmente */
+    gap: 20px;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+nav .menu.sticky {
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0; /* Lo coloca en la parte superior */
+    /*left: 0;*/
+    background-color: #ffffff; /* Fondo blanco para el menú fijo */
+    /*border-bottom: 2px solid #ffffff; Borde inferior del menú fijo */
+    width: 100%;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Sombra opcional para el menú fijo */
+    margin-top: 0;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: #151515;
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Barra inferior */
+.menu-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #edbb5f;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
+.menu li a.current-page {
+    color: #edbb5f;
+}
+
+/* Seccion de Divorcio */
+
+.divorces-separation,
+.penal-services,
+.honoraries-section {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 20px; /* Espacio alrededor de la sección */
+    box-sizing: border-box;
+}
+
+.left-side {
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    letter-spacing: -0.4px;
+    padding-top: 40px;
+}
+
+.section-title {
+    color: #a7a7a7;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 26px;
+    vertical-align: inherit;
+}
+
+.divorces-separator,
+.penal-separator {
+    border: 0;
+    border-top: 2px solid #edbb5f;
+    /*margin: 0px;*/
+    margin-left: 30px;
+    width: 25%;
+    transform: rotate(180deg);
+
+}
+
+.commitment-text {
+    font-size: 36px;
+    font-family: Inter, sans-serif;
+    color: #000 !important;
+    vertical-align: inherit;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+.highlight {
+    color: #a7a7a7;
+    font-weight: 500;
+}
+
+.right-side {
+    width: 65%;
+    padding: 20px;
+    padding-left: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.image-container {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-bottom: 20px;*/
+}
+
+.image-container img {
+    width: 800px;
+    height: 400px;
+    padding-right: 35px;
+    /*max-width: 709px;
+    max-height: 400px;
+    object-fit: cover;*/
+}
+
+.divorces-description,
+.penal-description {
+    font-size: 21px;
+    font-family: Inter, sans-serif;
+    color: #a7a7a7;
+    word-wrap: break-word;
+    margin-left: 40px;
+    margin-bottom: -15px;
+    padding-right: 5%;
+    line-height: 1.4em;
+}
+
+.divorces-description p p p strong {
+    font-weight: 500;
+}
+
+/* Seccion Justicia Penal */
+.penal-description-item {
+    margin-left: 75px;
+    margin-right: 15%;
+}
+
+.penal-description-item h4 {
+    font-size: 21px;
+    vertical-align: inherit;
+    font-weight: 400;
+    color: #a7a7a7;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin-bottom: 0;
+}
+
+.penal-description-item span {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.penal-description-item p {
+    font-size: 16px;
+    color: #a7a7a7;
+    margin-bottom: 30px;
+}
+
+.penal-description-item h4,
+.penal-description-item p {
+    position: relative;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.penal-description-item h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d9d9d9;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.penal-description-item p::after {
+    content: none;
+}
+.penal-description-item h4:hover::after {
+    transform: scaleX(1);
+}
+
+.penal-description-item h4:hover {
+    transform: translateY(-5px);
+}
+
+.penal-description-item p:hover {
+    transform: translateY(5px);
+}
+
+/* Seccion Honorarios */
+.honoraries-discreption {
+    font-size: 25px;
+    color: #a7a7a7;
+    line-height: 1.4em;
+    font-weight: bold;
+    margin-right: 15%;
+    margin-top: 2.5%;
+}
+
+.discreption-item {
+    font-size: 16px;
+    font-weight: normal;
+    height: 250px;
+}
+
+/* Seccion de Contacto */
+.contact-form-section {
+    width: 100%;
+    padding: 40px;
+    background: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 40px;
+    color: #a7a7a7;
+    font-weight: 800;
+}
+
+.form-header h2 span {
+    color: black;
+}
+
+.divider {
+    width: 76px;
+    height: 2px;
+    margin: 20px auto;
+    background-color: #f0bb5f;
+}
+
+.form-header p {
+    font-size: 16px;
+    color: #a7a7a7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-header .highlight {
+    color: #f0bb5f;
+}
+
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 48%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #a7a7a7;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color:#a7a7a7;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+    background-color: #f7d584;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #e6c074;
+}
+
+/* Estilos para la Sección Principal */
+.hero {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
+    width: 100%; /* Asegura que la sección hero ocupe todo el ancho disponible */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*.hero-image img {
+    max-width: 280px;
+    height: auto;
+}*/
+
+.hero-text {
+    max-width: 600px;
+    margin-left: 34px;
+    margin-top: -20px;  /* Mueve el texto hacia arriba */
+  /* Espacio entre la imagen y el texto */
+}
+
+.hero-text h1 {
+    font-size: 20px;
+    margin-bottom: -20px;
+    letter-spacing: 2px;
+    line-height: 1em;
+    font-weight: 700;
+    color: #edbb5f !important;
+}
+
+.hero-text p {
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    position: relative;
+}
+.hero-text p::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 2px;
+    background-color: #fbb040;
+    margin: 20px 0px;
+}
+.hero-text h2 {
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    color: #a7a7a7 !important;
+    text-align: justify;
+    line-height: 1.4em;
+}
+
+.specialties-button {
+    background-color: #f7d584;
+    color: rgba(0, 0, 0, 0.7) !important;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.specialties-button:hover {
+    transform: scale(1.1) translateX(5px);
+}
+
+/* Sección Especialidades */
+.specialties {
+    width: 100%;
+    padding: 28px 20px 44px 20px; /* Ajusta el padding para evitar el scroll horizontal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;
+    gap: 21px;
+}
+
+.specialties-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.specialties-header h3 {
+    font-weight: 400;
+    padding-bottom: 0;
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+    color: #edbb5f !important;
+    line-height: 1.8em !important;
+    text-align: center !important;
+}
+
+.specialties-underline {
+    width: 60px;
+    height: 1px;
+    border-top-color: #edbb5f;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    background-color: #edbb5f !important;
+    transform: rotate(-0.95deg);
+}
+
+.specialties-content {
+    max-width: 784px;
+    text-align: center;
+    color: #a7a7a7 !important;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+}
+
+.specialties-content h2 {
+    font-weight: 400;
+    font-size: 48px !important;
+    color: #a7a7a7 !important;
+    line-height: 110% !important;
+    text-align: center !important;
+}
+
+.specialties-content p {
+    margin: 0;
+    line-height: 1.4em;
+}
+
+.specialties-content .highlight {
+    color: #edbb5f;
+    font-weight: 600;
+}
+
+.specialties-content .lowlight {
+    font-weight: 700;
+}
+
+/* Contenedor de los servicios */
+.services {
+    width: 100%;
+    padding: 2px 20px; /* Ajusta el padding para evitar el scroll horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espacio entre los elementos service-item */
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
+}
+
+/* Estilo de los elementos del servicio */
+
+.service-item {
+    width: 486px;
+    padding: 29px 13px 45px 46px;
+    position: relative;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    color: #a7a7a7 !important;
+    position: relative;
+    margin: 0;
+    transition: transform 0.8s ease, transition 0.3s;
+}
+
+.service-item .arrow {
+    position: absolute;
+    left: 10px;
+    top: 27%;
+    transform: translateY(90%);
+    font-size: 24px;
+    color: #a7a7a7;
+    opacity: 0;
+}
+
+.service-item:hover h3 {
+    transform: translateX(10px);
+}
+
+.service-item:hover .arrow {
+    opacity: 1;
+    transform: translateY(-50%) translateX(10px); /* Muestra y desplaza la flecha junto al h3 */
+}
+
+.service-item p {
+    color: #a7a7a7;
+    margin-top: 15px;
+}
+
+.service-link {
+    color: #edbb5f;
+    text-decoration: none;
+}
+
+.separator {
+    border: 0;
+    border-top: 1px solid #a7a7a7 !important; /* Línea gris de 1px de grosor */
+    margin: 0;
+    width: 10%; /* O ajusta el ancho según sea necesario */
+    transform: rotate(90deg);
+}
+
+/* Contenedor principal */
+.location-section {
+    width: 100%;
+    height: 319px; /* Altura fija para el contenedor de la imagen de fondo */
+    position: relative;
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el alto total */
+}
+
+/* Imagen de fondo */
+.background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/guayaquil.jpg);
+    background-size: cover; /* Asegura que la imagen cubra el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: absolute; /* Ajusta la imagen para cubrir el contenedor */
+    top: 0;
+    left: 0;
+}
+
+/* Contenedor de texto */
+.text-container {
+    padding-top: 6.3vw !important;
+    padding-bottom: 2.6vw !important;
+    text-align: center; /* Centra el texto */
+    position: absolute; /* Ajusta la posición del contenedor de texto */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenedor vertical y horizontalmente */
+}
+
+/* Estilo del encabezado */
+.principal-text-container {
+    padding-bottom: 20px !important;
+    font-weight: 400;
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+    color: #ffffff !important;
+    text-align: center !important;
+}
+
+/* Estilo del texto principal */
+.main-text p {
+    padding-bottom: 29px !important;
+    line-height: 128%;
+    font-weight: 400;
+    font-size: 41px !important;
+    color: #ffffff !important;
+    letter-spacing: 0.6px !important;
+    text-align: center !important;
+}
+
+.main-text em {
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Estilo de la descripción */
+.description {
+    height: 88px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.et_pb_section {
+    padding: 20px;
+}
+
+.et_pb_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.et_pb_column {
+    width: 24%; /* Aumenta el ancho de las columnas para más espacio */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.et_pb_module_header {
+    color: #000 !important; /* Cambia a tu color deseado */
+    font-weight: 700;
+}
+
+.et_pb_blurb_content {
+    text-align: center;
+    color: #a7a7a7 !important;
+}
+
+.outer-box {
+    border: 2px solid #a7a7a7; /* Borde gris del contenedor externo */
+    border-radius: 10px;
+    padding: 20px; /* Aumenta el relleno para más espacio */
+    background-color: #ffffff; /* Fondo blanco del contenedor externo */
+    min-width: 250px;
+    box-sizing: border-box; /* Asegura un ancho mínimo para los recuadros */
+}
+
+.inner-box {
+    border: 2px solid #a7a7a7; /* Borde gris del contenedor interno */
+    border-radius: 8px;
+    padding: 20px; /* Aumenta el relleno para más espacio */
+    background-color: #ffffff;
+    box-sizing: border-box; /* Fondo blanco del contenedor interno */
+    transition:  transform 0.3s ease-in-out;
+    /*transition:  transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;*/ /* Transición suave para la expansión */
+}
+
+.outer-box:hover .inner-box {
+    transform: translateY(-10px);
+    /*transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Fondo blanco del círculo */
+    border: 2px solid #d0d0d0; /* Borde gris del círculo */
+    font-size: 24px;
+    margin: 0 auto 10px auto;
+    box-shadow: none; /* Asegúrate de que no haya sombra adicional */
+}
+
+.et_pb_blurb_container {
+    margin: 0 auto;
+}
+
+.et_pb_blurb_description {
+    font-size: 14px;
+    border-top: 1px solid #a7a7a7;
+}
+
+/* Estilo para los enlaces en los recuadros internos */
+.et_pb_blurb_container a {
+    color: inherit; /* Hereda el color del texto circundante */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Mapa */
+.map-section {
+    width: 100%;
+    height: 400px; /* Puedes ajustar esta altura según sea necesario */
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Elimina el borde alrededor del mapa */
+}
+
+/* Footer*/
+.footer {
+    width: 100%;
+    background-color: #ffffff; /* Color de fondo opcional */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 13px;
+    color: #a7a7a7;
+    text-align: left;
+    padding-bottom: 10px;
+    float: left;
+    font-weight: 700;
+}
+
+.footer-text.highlight a {
+    text-decoration: none;
+    color: #666666;
+    font-weight: 700;
+}
+
+.footer-text:not(:last-child) {
+    margin-right: 10px; /* Espacio entre los elementos */
+}
